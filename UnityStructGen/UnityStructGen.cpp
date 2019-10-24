@@ -382,7 +382,7 @@ void LoadPointers()
 		void* msUnityVersion = Custom_PropUnityVersion();
 		LOG("Loaded MonoString from Custom_PropUnityVersion: %p\n", msUnityVersion);
 
-		//Calls to 
+		//TODO: Calls to mono_string_to_utf8 cause a crash
 		char* propUnityVersion = mono_string_to_utf8(msUnityVersion);
 		LOG("Loaded version from Custom_PropUnityVersion: %s\n", propUnityVersion);
 	}
